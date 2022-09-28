@@ -3,7 +3,7 @@
 import pickle
 import json
 my_list = [15, 'Python', 'Hello World']
-
+my_list1 = [15, 20, 40, 80, 100]
 
 # Pickling
 with open("data.pickle", "wb") as file_handle:
@@ -17,4 +17,10 @@ with open("data.pickle", "rb") as file_handle:
 json_list = json.dumps(my_list)
 print(json_list)
 print(json.loads(json_list))
+
+with open("data1.pickle", "wb") as fi:
+    pickle.dump(my_list1, fi)
+
+with open("data.pickle", "rb") as fi:
+    print(pickle.load(fi))
 
